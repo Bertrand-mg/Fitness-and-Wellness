@@ -5,6 +5,7 @@ import Profile from "../components/Admin/Profile";
 import Logout from "../components/Logout";
 import Nav from "../components/Customer/Nav"; 
 import AvailableProgram from '../components/Customer/AvailableProgram';
+import MyProgram from '../components/Customer/MyProgram';
 
 function Customer() {
   return (
@@ -17,6 +18,7 @@ function Customer() {
         {/* <Route path="/all-users" element={<ManageTrainer />} /> */}
         {/* <Route path="/create-program" element={<CreateProgram />} /> */}
         <Route path="/available-programs" element={<AvailableProgram />} />
+        <Route path="/my-programs" element={<MyProgram />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>

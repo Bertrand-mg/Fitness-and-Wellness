@@ -106,20 +106,20 @@ function Nav() {
                   <Link to="/customer/profile" style={styles.dropdownLink}>
                     Profile
                   </Link>
-                  <Link to="/customer/goals" style={styles.dropdownLink}>
+                  {/*<Link to="/customer/goals" style={styles.dropdownLink}>
                     Fitness Goals
                   </Link>
                   <Link to="/customer/preferences" style={styles.dropdownLink}>
                     Preferences
-                  </Link>
+                  </Link>*/}
                 </div>
               )}
             </div>
 
-            <Link to="/customer/progress" style={styles.link}>
+            {/*<Link to="/customer/progress" style={styles.link}>
               <i style={styles.icon}>📊</i>
               Progress Tracker
-            </Link>
+            </Link>*/}
 
             <Link to="/customer/logout" style={styles.logoutLink}>
               <i style={styles.icon}>🚪</i>
