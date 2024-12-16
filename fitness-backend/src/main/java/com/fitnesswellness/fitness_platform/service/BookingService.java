@@ -4,8 +4,12 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.fitnesswellness.fitness_platform.dto.BookedProgram;
 import com.fitnesswellness.fitness_platform.dto.CreateBookingRequest;
 import com.fitnesswellness.fitness_platform.dto.UpdateBookingRequest;
 import com.fitnesswellness.fitness_platform.model.Booking;
@@ -80,4 +84,21 @@ public class BookingService {
         }
         bookingRepository.deleteById(id);
     }
+
+    public Page<BookedProgram> getBookingsByUserEmail(String email, int page, int size) {
+        // Create Pageable object from page and size
+        Pageable pageable = PageRequest.of(page, size);
+
+        // Call the repository's method to get the bookings with pagination
+        return bookingRepository.findBookingsByUserEmail(email, pageable);
+    }
+
+    public Page<BookedProgram> getBookings(int page, int size) {
+        // Create Pageable object from page and size
+        Pageable pageable = PageRequest.of(page, size);
+
+        // Call the repository's method to get the bookings with pagination
+        return bookingRepository.findBookings(pageable);
+    }
+
 }
